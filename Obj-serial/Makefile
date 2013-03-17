@@ -11,7 +11,7 @@ OBJ=$(SRC:%.f90=%.o)
 default: ../ljmd-serial.x
 
 clean:
-	rm -f *.mod *.o
+	rm -f *.mod *.o ../ljmd-serial.x
 
 # linker rule
 ../ljmd-serial.x: $(OBJ)

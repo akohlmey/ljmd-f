@@ -11,7 +11,7 @@ OBJ=$(SRC:%.f90=%.o)
 default: ../ljmd-parallel.x
 
 clean:
-	rm -f *.mod *.o
+	rm -f *.mod *.o ../ljmd-parallel.x
 
 # linker rule
 ../ljmd-parallel.x: $(OBJ)

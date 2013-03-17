@@ -13,17 +13,12 @@ OBJ_SERIAL=$(SRC:src/%.f90=Obj-serial/%.o)
 OBJ_PARALLEL=$(SRC:src/%.f90=Obj-parallel/%.o)
 ############################################
 
-default: ljmd-serial.x ljmd-parallel.x
+default: serial parallel
 
-ljmd-serial.x:
-	$(MAKE) $(MFLAGS) -C Obj-serial
-
-ljmd-parallel.x:
-	$(MAKE) $(MFLAGS) -C Obj-parallel
+serial parallel:
+	$(MAKE) $(MFLAGS) -C Obj-$@
 
 clean:
 	$(MAKE) $(MFLAGS) -C Obj-serial clean
 	$(MAKE) $(MFLAGS) -C Obj-parallel clean
-	rm -f ljmd-serial.x ljmd-parallel.x
-
 
