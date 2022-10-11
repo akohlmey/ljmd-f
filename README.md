@@ -9,5 +9,5 @@ The examples directory contains 3 sets of example input decks
 and the reference directory the corresponding outputs.
 
 Type: make
-to compile everything and: make clean
-to remove all compiled objects
+- to compile everything and: make clean
+- to remove all compiled objects
